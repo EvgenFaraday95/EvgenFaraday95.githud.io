@@ -2,81 +2,102 @@
 
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Web Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Cайты и брендинг</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="hero">
-    <div class="container">
-      <p class="tag">WEB STUDIO 2026</p>
+  <!-- HERO -->
+  <div class="hero reveal">
+    <h1>Сайты и логотипы, которые превращают бизнес в бренд</h1>
+    <p>
+      Меня зовут Евгений. Я создаю сайты, логотипы и фирменный стиль,
+      которые выглядят дорого и помогают привлекать клиентов.
+    </p>
 
-      <h1>Меня зовут Евгений</h1>
+    <a class="btn"
+       href="https://t.me/gudkov_es?text=Привет!%20Хочу%20сайт"
+       target="_blank">
+      Написать в Telegram
+    </a>
+  </div>
 
-      <p class="sub">
-        Я создаю сайты и логотипы для бизнеса, брендов и соцсетей
-      </p>
+  <div class="container">
 
-      <a href="https://t.me/gudkov_es" class="btn">Связаться со мной</a>
-    </div>
-  </header>
-
-  <section class="section">
-    <div class="container">
-      <h2>Что я делаю</h2>
-
+    <!-- PROBLEM -->
+    <div class="section reveal">
+      <h2>Проблема</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Сайты</h3>
-          <p>Лендинги и бизнес-сайты под ключ</p>
-        </div>
-
-        <div class="card">
-          <h3>Логотипы</h3>
-          <p>Фирменный стиль и брендинг</p>
-        </div>
-
-        <div class="card">
-          <h3>Дизайн</h3>
-          <p>Современные UI/UX решения</p>
-        </div>
+        <div class="card">Сайт выглядит устаревшим</div>
+        <div class="card">Нет доверия к бизнесу</div>
+        <div class="card">Клиенты уходят к конкурентам</div>
       </div>
     </div>
-  </section>
 
-  <section class="section dark">
-    <div class="container">
-      <h2>Портфолио</h2>
-
-      <div class="portfolio">
-
-        <div class="work">
-          <img src="https://picsum.photos/600/400?random=1">
-          <h3>Сайт для бизнеса</h3>
-          <p>Лендинг для компании (demo проект)</p>
-        </div>
-
-        <div class="work">
-          <img src="https://picsum.photos/600/400?random=2">
-          <h3>Логотип бренда</h3>
-          <p>Минималистичный фирменный стиль</p>
-        </div>
-
-        <div class="work">
-          <img src="https://picsum.photos/600/400?random=3">
-          <h3>Сайт услуг</h3>
-          <p>Сайт для специалиста</p>
-        </div>
-
+    <!-- SOLUTION -->
+    <div class="section reveal">
+      <h2>Решение</h2>
+      <div class="grid">
+        <div class="card">Современные сайты под ключ</div>
+        <div class="card">Логотипы и фирменный стиль</div>
+        <div class="card">Дизайн уровня премиум студий</div>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <p>© Web Studio 2026</p>
+    <!-- RESULT -->
+    <div class="section reveal">
+      <h2>Результат</h2>
+      <div class="grid">
+        <div class="card">Более дорогой образ бренда</div>
+        <div class="card">Рост доверия клиентов</div>
+        <div class="card">Больше заявок</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="section reveal" id="contact">
+      <h2>Обсудим проект?</h2>
+
+      <div class="card">
+        Я отвечаю в Telegram быстро и по делу.
+        Сделаем сайт уровня Apple, который реально продаёт.
+
+        <br><br>
+
+        <a class="btn"
+           href="https://t.me/gudkov_es?text=Привет!%20Хочу%20сайт"
+           target="_blank">
+          Перейти в Telegram →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="reveal">
+    © 2026 Cайты и брендинг
   </footer>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const elements = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
